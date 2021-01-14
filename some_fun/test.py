@@ -7,5 +7,5 @@ dict_test = {
     "boolean": True
 }
 
-for item in dict_test:
-    
+del(dict_test["name"])
+print(dict_test)
