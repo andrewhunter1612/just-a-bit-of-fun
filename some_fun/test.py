@@ -9,3 +9,8 @@ dict_test = {
 
 del(dict_test["name"])
 print(dict_test)
+
+name = dict_test["number"]
+
+print(name)
+print(number_list[2])
