@@ -14,7 +14,7 @@ def get_individual_letter(number):
 password_letter_index = 0
 password = ""
 letter = ""
-while password_letter_index< 10:
+while password_letter_index < 10:
     letter = get_individual_letter(random.randrange(0,61))
     password += letter
 
