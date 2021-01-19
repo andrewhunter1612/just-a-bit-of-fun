@@ -11,10 +11,8 @@ class ChangeTuple:
         while word_number < self.get_tuple_length():
             new_tuple.append(self.tuple[word_number])
             word_number += 1
-
         new_tuple.append(new_item)
-        return tuple(new_tuple)
-
+        self. tuple = tuple(new_tuple)
 
     def get_tuple_length(self):
         return len(self.tuple)
