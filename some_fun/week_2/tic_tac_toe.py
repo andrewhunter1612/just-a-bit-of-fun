@@ -4,13 +4,19 @@ player_history = [
 ]
 
 player_one_turn = True
-game_won = False
 turn_count = [0, 0]
+possible_inputs = [*range(1,10)]
+game_won = False
+
+def end_game():
+    again = input("Do you want to play again? ")
+    if again.lower() == "yes":
+        play_game()
+
 
 def take_a_turn(remaining_positions, player_move):
     while player_move not in possible_inputs:
         player_move = int(input("Enter a position: "))
-    print(player_one_turn)
     possible_inputs.remove(player_move)
     if player_one_turn:
         player_history[0]["turn_history"].append(player_move)
@@ -32,38 +38,31 @@ def check_if_game_won(player_history, player_one_turn):
     ]
 
     if player_one_turn:
-        pass
-
-
-
-
-
+        for position in winning_positions:
+            if position[0] in player_history[0]["turn_history"] and position[1] in player_history[0]["turn_history"] and position[2] in player_history[0]["turn_history"]:
+                print("player 1 wins")
+                return True
+    else:
+        for position in winning_positions:
+            if position[0] in player_history[1]["turn_history"] and position[1] in player_history[1]["turn_history"] and position[2] in player_history[1]["turn_history"]:
+                print("player 2 wins")
+                return True
+    return False
 
 first_question = input("Would you like to play a game? ")
 number_of_players = int(input("How many players: "))
-
-
-
-possible_inputs = [*range(1,10)]
-
 
 while game_won == False:
     if player_one_turn:
         player_one_move = int(input("Enter a position: "))
         possible_inputs = take_a_turn(possible_inputs, player_one_move)
-        
+        turn_count[0] += 1
     else:
         player_two_move = int(input("Enter a position: "))
         take_a_turn(possible_inputs, player_two_move)
+        turn_count[1] += 1
     print(player_history)
     if turn_count[0] >= 3 or turn_count[1] >= 3:
-        check_if_game_won(player_history, player_one_turn)
+        game_won = check_if_game_won(player_history, player_one_turn)
 
     player_one_turn = not player_one_turn
-
-
-
-
-
-
-
