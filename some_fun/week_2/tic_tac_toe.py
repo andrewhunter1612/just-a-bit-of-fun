@@ -53,16 +53,22 @@ first_question = input("Would you like to play a game? ")
 number_of_players = int(input("How many players: "))
 
 while game_won == False:
-    if player_one_turn:
-        player_one_move = int(input("Enter a position: "))
-        possible_inputs = take_a_turn(possible_inputs, player_one_move)
-        turn_count[0] += 1
+    if possible_inputs != []:
+        if player_one_turn:
+            player_one_move = int(input("Enter a position: "))
+            possible_inputs = take_a_turn(possible_inputs, player_one_move)
+            turn_count[0] += 1
+        else:
+            player_two_move = int(input("Enter a position: "))
+            take_a_turn(possible_inputs, player_two_move)
+            turn_count[1] += 1
+        print(player_history)
+        if turn_count[0] >= 3 or turn_count[1] >= 3:
+            game_won = check_if_game_won(player_history, player_one_turn)
+        
+        player_one_turn = not player_one_turn
     else:
-        player_two_move = int(input("Enter a position: "))
-        take_a_turn(possible_inputs, player_two_move)
-        turn_count[1] += 1
-    print(player_history)
-    if turn_count[0] >= 3 or turn_count[1] >= 3:
-        game_won = check_if_game_won(player_history, player_one_turn)
+        print("Game drawn")
+        game_won = True
 
-    player_one_turn = not player_one_turn
+    
