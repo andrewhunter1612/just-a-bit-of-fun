@@ -1,18 +1,17 @@
 #button-display{
     display: flex;
     flex-flow: row wrap;
-    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .button-layout{    
-    height: 200px;
-    width: 200px;
-    flex: 1 0 33%;
+    height: 100px;
+    width: 100px;
     margin: 1px;
 }
 
 
 .text-layout{
-    font-size: 100px;
+    font-size: 50px;
     margin-top: 50px;
 }
