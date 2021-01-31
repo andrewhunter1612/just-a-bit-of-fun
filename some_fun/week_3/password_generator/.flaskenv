@@ -1,0 +1,2 @@
+FLASK_APP=password_generator.py
+FLASK_ENV=development
