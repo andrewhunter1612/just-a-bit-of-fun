@@ -7,13 +7,8 @@
     <title>{{title}}</title>
 </head>
 <body>
-    <header>{{title}}</header>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/passwords">Passwords</a></li>
-        </ul>
-    </nav>
+    
+    {% block content %}{% endblock %}
 
     <main>
         <form action="/" method="POST">

@@ -17,4 +17,4 @@ def make_new_password():
 
 @app.route('/passwords')
 def passwords_page():
-    return render_template('passwords.html', title="Passwords")
+    return render_template('passwords.html', title="Passwords", passwords=password_list)
