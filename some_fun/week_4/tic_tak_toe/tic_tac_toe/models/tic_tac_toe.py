@@ -5,4 +5,6 @@ class TicTacToe:
     def increase_turn_number(self):
         self.turn_number += 1
 
+    def check_for_winner(self, player):
+        pass
     

@@ -1,0 +1,22 @@
+#button-display{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3px;
+    width: 100px;
+    
+}
+
+.button-layout{    
+    height: 100px;
+    width: 100px;
+    margin: 1px;
+}
+
+
+.text-layout{
+    font-size: 70px;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+}

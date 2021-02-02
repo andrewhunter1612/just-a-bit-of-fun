@@ -5,7 +5,7 @@ from password_generator.models.password import Password
 
 @app.route('/')
 def home_page():
-    return render_template('home.html', title="Password Generator")
+    return render_template('header.html', title="Password Generator")
 
 @app.route('/', methods=['POST'])
 def make_new_password():
@@ -17,4 +17,4 @@ def make_new_password():
 
 @app.route('/passwords')
 def passwords_page():
-    return render_template('passwords.html', title="Passwords", passwords=password_list)
+    return render_template('header.html', title="Passwords", passwords=password_list)
