@@ -4,7 +4,8 @@ DROP TABLE IF EXISTS player_histories;
 CREATE TABLE player_histories(
     id SERIAL PRIMARY KEY, 
     word VARCHAR(255) NOT NULL,
-    wins INT
+    wins INT,
+    games_player INT
 );
 
 CREATE TABLE players(

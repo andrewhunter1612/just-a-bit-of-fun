@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HOME PAGE</h1>
+
+    <form action="/add" method="POST">
+        <label for="name">Enter new player name</label>
+        <input type="text" name="name" id="name" placeholder="Enter new player name">
+        <button type="submit">Add</button>
+    </form>
+    <hr>
+        {% for player in  all_players %}
+            {{player.name}} {{player.id}} <a href="/more-info/{{player.id}}"><button>More info</button></a>
+           
+        <hr>
+    {% endfor %}
+</body>
+</html>

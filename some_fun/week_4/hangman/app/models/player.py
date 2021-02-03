@@ -1,7 +1,8 @@
 class Player:
-    def __init__(self, name, guessing=False):
+    def __init__(self, name, id=None):
         self.name = name
-        self.guessing = guessing
+        self.guessing = False
+        self.id = id
         self.number_of_wins = 0
         self.number_of_games = 0
         self.words_used = []
