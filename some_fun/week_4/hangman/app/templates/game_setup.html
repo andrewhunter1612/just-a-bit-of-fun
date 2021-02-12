@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is the game page</h1>
+
+    <form action="/game-setup" method="POST">
+        <label for="player_1">Choose player 1: </label>
+        <select name="player_1" id="player_1">
+
+    {% for player in all_players %}
+    <option value="{{player.id}}">{{player.name}}</option>
+    {% endfor %}
+</select>
+
+
+    <label for="player_2">Choose player 2: </label>
+    <select name="player_2" id="player_2">
+    {% for player in all_players %}
+    <option value="{{player.id}}">{{player.name}}</option> 
+    {% endfor %}
+</select>
+    <br>
+    <input type="submit" value="Let's Play!">
+</form>
+</body>
+</html>

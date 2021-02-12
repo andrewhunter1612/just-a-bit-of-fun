@@ -3,6 +3,7 @@ class Player:
         self.name = name
         self.guessing = False
         self.id = id
+        self.current_word = ""
         self.number_of_wins = 0
         self.number_of_games = 0
         self.words_used = []

@@ -11,5 +11,7 @@ class Game:
     def reduce_guesses_left(self):
         self.number_of_guesses_left -=1
     
-    
+    def play_game(self):
+
+        pass
 
