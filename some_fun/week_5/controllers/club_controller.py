@@ -36,3 +36,7 @@ def see_all_times_page(club_id):
 def admin_page(club_id):
     current_club = club_repository.select_club(club_id)
     return render_template('boss/index.html', current_club=current_club)
+
+
+
+
