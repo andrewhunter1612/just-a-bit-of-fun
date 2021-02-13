@@ -1,2 +1,2 @@
 FLASK_APP=booking.py
-FLASK.ENV=development
+FLASK_ENV=development

@@ -13,7 +13,7 @@ def add_new_session_time(time):
 def select_time(id):
     sql = "SELECT FROM times_available WHERE id=%s"
     value = [id]
-    result = run_sql(sql, value)
+    result = run_sql(sql, value)[0]
     if result is not None:
         club = club_repository.select_club(result["club_id"])
         time = Time(result["start_time"], result["duration"], club, result["id"])

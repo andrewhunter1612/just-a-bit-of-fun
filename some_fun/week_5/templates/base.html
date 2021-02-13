@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title class="header-title">Vet Shop Boys</title>
+</head>
+<body>
+    <header id="main-header">
+        <h1>Sports Booking App</h1>
+        <nav>
+            <ul>
+                {% if request.path.split('/')[1] == "" %}
+                    <li class="highlighted-button"><a href="/">Home</a></li>
+                {% else %}
+                    <li class="unhighlighted-button"><a href="/">Home</a></li>
+                {% endif %}
+
+
+                {% if request.path.split('/')[1] == "vets" %}
+                    <li class="highlighted-button"><a href="/choose-time">Choose Time</a></li>
+                {% else %}
+                    <li class="unhighlighted-button"><a href="/choose-time">Choose Time</a></li>
+                {% endif %}
+
+                
+                {% if request.path.split('/')[1] == "animals" %}
+                    <li class="highlighted-button"><a href="/see-all-times">See All Times</a></li>
+                {% else %}
+                    <li class="unhighlighted-button"><a href="/see-all-times">See All Times</a></li>
+                {% endif %}
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock  %}
+    </main>
+    <footer id="main-footer">
+       <p>&#169 Andrew Hunter 2021</p> 
+    </footer>
+    
+</body>
+</html>
