@@ -16,8 +16,7 @@ app.register_blueprint(club_blueprint)
 def home():
     clubs = club_repository.select_all_clubs()
     members = member_repository.select_all_members()
-    return render_template('home_page/index.html', clubs=clubs, members=members)
-
+    return render_template('enter_details_page/index.html', clubs=clubs, members=members)
 
 if __name__ == '__main__':
     app.run(debug=True)

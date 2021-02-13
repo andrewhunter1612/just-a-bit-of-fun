@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section>
+    <form action="">
+        <label for="start_time">Start time:</label>
+        <input type="time" name="start_time" id="start_time">
+
+        <label for="duration">Duration: </label>
+        <input type="number" name="duration" id="duration">
+        <div class="days">
+            <label for="day">Day of week: </label>
+            <div class="day-checkboxes">
+                <label for="monday">Monday: </label>
+                <input type="checkbox" name="monday" id="monday">
+                <label for="tuesday">Tuesday: </label>
+                <input type="checkbox" name="tuesday" id="tuesday">
+                <label for="wednesday">Wednesday: </label>
+                <input type="checkbox" name="wednesday" id="wednesday">
+                <label for="thursday">Thursday: </label>
+                <input type="checkbox" name="thursday" id="thursday">
+                <label for="friday">Friday: </label>
+                <input type="checkbox" name="friday" id="friday">
+                <label for="saturday">Saturday: </label>
+                <input type="checkbox" name="saturday" id="saturday">
+                <label for="sunday">Sunday: </label>
+                <input type="checkbox" name="sunday" id="sunday">
+            </div>
+        </div>
+    </form>
+</section>
+    
+{% endblock content %}
