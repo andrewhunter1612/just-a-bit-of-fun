@@ -23,3 +23,5 @@ def select_all_clubs():
         club = Club(result["name"], result["number_of_courts"], result["id"])
         clubs.append(club)
     return clubs
+
+

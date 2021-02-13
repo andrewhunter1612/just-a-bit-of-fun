@@ -12,7 +12,8 @@ CREATE TABLE times_available(
     id SERIAL PRIMARY KEY, 
     start_time VARCHAR(255) NOT NULL,
     session_duration VARCHAR(255) NOT NULL,
-    club_id INT REFERENCES clubs(id) ON DELETE CASCADE
+    club_id INT REFERENCES clubs(id) ON DELETE CASCADE,
+    day VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE members(
