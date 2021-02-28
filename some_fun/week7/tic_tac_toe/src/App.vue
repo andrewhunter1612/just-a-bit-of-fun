@@ -1,13 +1,15 @@
 <template>
   <div>
-    <h1>Heizomat Boiler Support</h1>
-    
+    <game></game>
   </div>
 </template>
 
 <script>
+import GameVue from './components/Game.vue'
   export default {
-    
+    components:{
+      'game': GameVue
+    }
   }
 </script>
 
